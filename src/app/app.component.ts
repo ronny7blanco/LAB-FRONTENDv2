@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LAB-FRONTENDv2';
+  title = 'LAB-FRONTEND';
 }

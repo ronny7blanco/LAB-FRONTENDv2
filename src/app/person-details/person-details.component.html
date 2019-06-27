@@ -1,0 +1,34 @@
+<div *ngIf="person">
+    <div>
+        <label>Name: </label> {{person.nombre}}
+    </div>
+    <div>
+        <label>LastName: </label> {{person.apellido}}
+    </div>
+    <div>
+        <label>Fecha Nacimiento: </label> {{person.fechaNacimiento}}
+    </div>
+    <div>
+        <label>Email: </label> {{person.email}}
+    </div>
+    <div>
+        <label>Celular: </label> {{person.telefonoCelular}}
+    </div>
+    <div>
+        <label>Estado: </label> {{person.estado}}
+    </div>
+    <div>
+        <label>Rol: </label> {{person.rol}}
+    </div>
+    <div>
+        <label>Active: </label> {{person.active}}
+    </div>
+
+    <span class="button is-small btn-primary" *ngIf='person.active' (click)='updateActive(false)'>Inactive</span>
+
+    <span class="button is-small btn-primary" *ngIf='!person.active' (click)='updateActive(true)'>Active</span>
+
+    <span class="button is-small btn-danger" (click)='deletePerson()'>Delete</span>
+
+    <hr/>
+</div>
