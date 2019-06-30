@@ -17,7 +17,7 @@ export class CreatePersonComponent implements OnInit {
   ngOnInit() {
   }
 
-  newEmployee(): void {
+  newPersona(): void {
     this.submitted = false   
   }
 

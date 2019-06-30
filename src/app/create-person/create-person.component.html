@@ -2,10 +2,13 @@
 <div [hidden]="submitted" style="width: 400px;">
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
+            <label for="name">id</label>
+            <input type="text" class="form-control" id="idPersona" required [(ngModel)]="person.idPersona" name="idPersona">
+        </div>
+        <div class="form-group">
             <label for="name">First Name</label>
             <input type="text" class="form-control" id="nombre" required [(ngModel)]="person.nombre" name="nombre">
         </div>
-
         <div class="form-group">
             <label for="name">Last Name</label>
             <input type="text" class="form-control" id="apellido" required [(ngModel)]="person.apellido" name="apellido">
@@ -14,11 +17,6 @@
         <div class="form-group">
             <label for="name">Fecha Nacimiento</label>
             <input type="text" class="form-control" id="fechaNacimiento" required [(ngModel)]="person.fechaNacimiento" name="fechaNacimiento">
-        </div>
-
-        <div class="form-group">
-            <label for="name">Email ID</label>
-            <input type="text" class="form-control" id="email" required [(ngModel)]="person.email" name="email">
         </div>
 
         <div class="form-group">
@@ -36,7 +34,12 @@
             <input type="text" class="form-control" id="rol" required [(ngModel)]="person.rol" name="rol">
         </div>
 
-        <button type="submit" class="btn btn-success">Submit</button>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email" required [(ngModel)]="person.email" name="email">
+        </div>
+
+        <button type="submit" class="btn btn-success">Agregar</button>
     </form>
 </div>
 
