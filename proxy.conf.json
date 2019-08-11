@@ -2,5 +2,15 @@
     "/lab/personas": {
         "target": "http://localhost:8080",
         "secure": false
+    },
+
+    "/lab/usuarios": {
+        "target": "http://localhost:8080",
+        "secure": false
+    },
+
+    "/lab/detalle_tipoex": {
+        "target": "http://localhost:8080",
+        "secure": false
     }
 }

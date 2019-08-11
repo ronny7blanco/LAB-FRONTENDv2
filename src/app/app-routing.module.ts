@@ -8,6 +8,8 @@ import { ListUsersComponent } from './components/admin/list-users/list-users.com
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { Page404Component } from './components/page404/page404.component';
+import { DetalletipoexaListComponent } from './components/detalletipoexa-list/detalletipoexa-list.component';
+import { CreateDetalletipoexaComponent } from './components/create-detalletipoexa/create-detalletipoexa.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,9 +17,11 @@ const routes: Routes = [
   { path: 'user/login', component: LoginComponent },
   { path: 'user/register', component: RegisterComponent },
   { path: 'personas', component: PersonListComponent },
-  { path: 'add', component: CreatePersonComponent },
-  { path: 'update', component: PersonDetailsComponent },
-  { path: '**', component: Page404Component }
+  { path: 'personas/add', component: CreatePersonComponent },
+  { path: 'personas/update', component: PersonDetailsComponent },
+  { path: 'detalletipoexa-list', component: DetalletipoexaListComponent},
+  { path: 'detalletipoexa-list/create-detalle', component: CreateDetalletipoexaComponent},
+  { path: '**', component: Page404Component },
 ];
 
 @NgModule({

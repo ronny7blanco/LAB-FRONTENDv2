@@ -3,9 +3,10 @@
         <h1>Personas</h1>
     </div>
     <div class="panel-body">
-        <table class="table table-striped table-bordered">
+        <table class="table table-hover">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>FirstName</th>
                     <th>Lastname</th>
                     <th>Fecha de Nacimieto</th>
@@ -13,11 +14,13 @@
                     <th>Celular</th>
                     <th>Estado</th>
                     <th>Rol</th>
-                    <th>Actions</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let person of persons | async">
+                <tr *ngFor="let person of persons | async; index as i">
+                    <th scope="row">{{i+1}}</th>
                     <td>{{person.nombre}}</td>
                     <td>{{person.apellido}}</td>
                     <td>{{person.fechaNacimiento}}</td>
@@ -25,7 +28,9 @@
                     <td>{{person.telefonoCelular}}</td>
                     <td>{{person.estado}}</td>
                     <td>{{person.rol}}</td>
-                    <td><button class="btn btn-primary active" (click)="deletePersona(person.idPersona)">Eliminar</button></td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deletePersona(person.idPersona)">Eliminar</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

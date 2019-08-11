@@ -1,32 +1,27 @@
-<div class="cover-container d-flex h-90 p-30 mx-auto flex-column">
-    <header class="masthead mb-auto">
-        <div class="inner">
-            <h2 class="masthead-brand">Laboratorio Clinico</h2>
-            <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link active" href="#">Personas</a>
-                <a class="nav-link" href="#">Tipos de Examenes</a>
-                <a class="nav-link" href="#">Resultados</a>
+<section class="hero">
+    <header>
+        <div class="wrapper">
+            <a href="#"><img src="assets/img/logo.png" width="65px" height="65px" class="logo" /></a>
+            <a href="#" class="hamburger"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a routerLink="user/register">Registrate</a></li>
+                    <li><a routerLink="personas">Personas</a></li>
+                    <li><a routerLink="detalletipoexa-list">Detalles Examenes</a></li>
+                    <li><a routerLink="user/login">Inicio de Sesión</a></li>
+                </ul>
             </nav>
         </div>
     </header>
-</div>
-<div class="container">
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a routerLink="personas" class="btn btn-primary active" role="button" routerLinkActive="active">Persons</a>
-            </li>
-            <li class="nav-item" style="margin-left: 10px;">
-                <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
-            </li>
-            <li class="nav-item" style="margin-left: 10px;">
-                <a routerLink="update" class="btn btn-primary active" role="button" routerLinkActive="active">Actualizar</a>
-            </li>
-        </ul>
-
-    </nav>
+    <!--  end header section  -->
     <router-outlet></router-outlet>
-</div>
+</section>
+<footer>
+    <div class="copyrights wrapper">
+        Copyright © 2019
+        <a href="https://ugb.edu.sv" target="_blank" class="ph_link" title="Universidad Gerardo Barrios"></a>UGB All Rights Reserved.
+    </div>
+</footer>
+<!--  end footer  -->
+<!--  end advanced search section  -->

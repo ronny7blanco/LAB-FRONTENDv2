@@ -13,6 +13,8 @@ import { ListUsersComponent } from './components/admin/list-users/list-users.com
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { Page404Component } from './components/page404/page404.component';
+import { DetalletipoexaListComponent } from './components/detalletipoexa-list/detalletipoexa-list.component';
+import { CreateDetalletipoexaComponent } from './components/create-detalletipoexa/create-detalletipoexa.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { Page404Component } from './components/page404/page404.component';
     ListUsersComponent,
     LoginComponent,
     RegisterComponent,
-    Page404Component
+    Page404Component,
+    DetalletipoexaListComponent,
+    CreateDetalletipoexaComponent
   ],
   imports: [
     BrowserModule,

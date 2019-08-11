@@ -19,7 +19,7 @@ export class CreatePersonComponent implements OnInit {
   }
 
   newPersona(): void {
-    this.submitted = false   
+    this.submitted = false    
   }
 
   save() {
