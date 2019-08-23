@@ -1,27 +1,20 @@
 <section class="hero">
     <header>
-        <div class="wrapper">
-            <a href="#"><img src="assets/img/logo.png" width="65px" height="65px" class="logo" /></a>
-            <a href="#" class="hamburger"></a>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a routerLink="user/register">Registrate</a></li>
-                    <li><a routerLink="personas">Personas</a></li>
-                    <li><a routerLink="detalletipoexa-list">Detalles Examenes</a></li>
-                    <li><a routerLink="user/login">Inicio de Sesión</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <div class="class navbar-nav">
+                <a class="nav-item nav-link" routerLink="/">Home</a>
+                <a *ngIf="loginservice.isUserLoggedIn()" routerLink="/user/register" class="nav-item nav-link">Registrate</a>
+                <a *ngIf="loginservice.isUserLoggedIn()" routerLink="/personas" class="nav-item nav-link">Personas</a>
+                <a *ngIf="loginservice.isUserLoggedIn()" routerLink="/detalletipoexa-list" class="nav-item nav-link">Detalles Examenes</a>
+                <a *ngIf="loginservice.isUserLoggedIn()" routerLink="/historialexa-list" class="nav-item nav-link">Historial Examenes</a>
+                <a *ngIf="!loginservice.isUserLoggedIn()" routerLink="/user/login" class="nav-item nav-link">Inicio de Sesión</a>
+                <a *ngIf="loginservice.isUserLoggedIn()" routerLink="logout" class="nav-item nav-link">Salir</a>
+            </div>
+        </nav>
+        <hr>
     </header>
     <!--  end header section  -->
-    <router-outlet></router-outlet>
 </section>
-<footer>
-    <div class="copyrights wrapper">
-        Copyright © 2019
-        <a href="https://ugb.edu.sv" target="_blank" class="ph_link" title="Universidad Gerardo Barrios"></a>UGB All Rights Reserved.
-    </div>
-</footer>
+<router-outlet></router-outlet>
 <!--  end footer  -->
 <!--  end advanced search section  -->

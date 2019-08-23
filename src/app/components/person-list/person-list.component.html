@@ -1,38 +1,43 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h1>Personas</h1>
-    </div>
-    <div class="panel-body">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>FirstName</th>
-                    <th>Lastname</th>
-                    <th>Fecha de Nacimieto</th>
-                    <th>Email</th>
-                    <th>Celular</th>
-                    <th>Estado</th>
-                    <th>Rol</th>
-                    <th>&nbsp;</th>
-                    <th>&nbsp;</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let person of persons | async; index as i">
-                    <th scope="row">{{i+1}}</th>
-                    <td>{{person.nombre}}</td>
-                    <td>{{person.apellido}}</td>
-                    <td>{{person.fechaNacimiento}}</td>
-                    <td>{{person.email}}</td>
-                    <td>{{person.telefonoCelular}}</td>
-                    <td>{{person.estado}}</td>
-                    <td>{{person.rol}}</td>
-                    <td>
-                        <button class="btn btn-danger" (click)="deletePersona(person.idPersona)">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Personas</h3>
+            <button (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Nuevo</button>
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-hover">
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>DUI</th>
+                        <th>Nombre</th>
+                        <th>Fecha de Nacimieto</th>
+                        <th>Genero</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let person of persons | async; index as i">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{person.dui}}</td>
+                        <td>{{person.nombre}}</td>
+                        <td>{{person.fechaNacimiento}}</td>
+                        <td>{{person.genero}}</td>
+                        <td>{{person.email}}</td>
+                        <td>{{person.telefonoCelular}}</td>
+                        <td>{{person.rol}}</td>
+                        <td>
+                            <button class="btn-warning" routerLink="/personas/edit">Editar</button> <button class="btn btn-danger" (click)="deletePersona(person.idPersona)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

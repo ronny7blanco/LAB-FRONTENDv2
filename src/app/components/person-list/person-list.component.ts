@@ -32,4 +32,7 @@ export class PersonListComponent implements OnInit {
         },
         error => console.log(error));
   }
+  Nuevo(){
+    this.router.navigate(['/personas/add'])
+  }
 }

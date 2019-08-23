@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CreatePersonComponent } from './components/create-person/create-person.component';
-import { PersonDetailsComponent } from './components/person-details/person-details.component';
 import { PersonListComponent } from './components/person-list/person-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,12 +14,15 @@ import { RegisterComponent } from './components/user/register/register.component
 import { Page404Component } from './components/page404/page404.component';
 import { DetalletipoexaListComponent } from './components/detalletipoexa-list/detalletipoexa-list.component';
 import { CreateDetalletipoexaComponent } from './components/create-detalletipoexa/create-detalletipoexa.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { HitorialexaListComponent } from './components/hitorialexa-list/hitorialexa-list.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { PersonaEditComponent } from './components/personas/persona-edit/persona-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePersonComponent,
-    PersonDetailsComponent,
     PersonListComponent,
     HomeComponent,
     ListUsersComponent,
@@ -28,7 +30,11 @@ import { CreateDetalletipoexaComponent } from './components/create-detalletipoex
     RegisterComponent,
     Page404Component,
     DetalletipoexaListComponent,
-    CreateDetalletipoexaComponent
+    CreateDetalletipoexaComponent,
+    LogoutComponent,
+    HitorialexaListComponent,
+    AdminComponent,
+    PersonaEditComponent
   ],
   imports: [
     BrowserModule,
